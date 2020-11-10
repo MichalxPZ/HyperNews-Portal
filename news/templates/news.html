@@ -1,0 +1,15 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>HyperNews Portal/News</title>
+    </head>
+    <body>
+        <h2 class="title">{{title}}</h2>
+        <p class="created">{{created}}</p>
+        <p class="text">{{text}}</p>
+        <p class="link"><a class target="_blank" href="/news/">News</a></p>>
+    </body>
+</html>

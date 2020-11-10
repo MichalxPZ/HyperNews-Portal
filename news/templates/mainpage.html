@@ -1,0 +1,29 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>HyperNews Portal</title>
+        <h1>Welcome to </br> HyperNews Portal</h1>
+    </head>
+    <body>
+        <form method="GET">
+            {% csrf_token %}
+            <label for="title">Search news by title:</label><br>
+            <input type="text" id="q" name="q"><br>
+            <button type="submit">Search</button>
+         </form>
+        {% for date in date_table %}
+            <h4>{{ date }}</h4>
+            <ul>
+            {% for i in sorted_news %}
+                {% if date == i.date %}
+                    <li><a target="_blank" href="/news/{{ i.link }}/">{{ i.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+        {% endfor %}
+        <p class="link"><a target="_blank" href="/news/create/">Add news</a></p>
+    </body>
+</html>
