@@ -1,7 +1,7 @@
 # HyperNews-Portal
 JetBrains Academy project course  
 Web App created with HTML, CSS and Django  
-Provides users to search for news and create their own ones  
+Provides users with features to search for news and create their own ones  
 
 ### Requirements
 1.Python  
